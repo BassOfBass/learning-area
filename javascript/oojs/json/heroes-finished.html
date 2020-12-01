@@ -35,18 +35,18 @@
       showHeroes(superHeroes);
     }
 
-    function populateHeader(jsonObj) {
+    function populateHeader(obj) {
       const myH1 = document.createElement('h1');
-      myH1.textContent = jsonObj['squadName'];
+      myH1.textContent = obj['squadName'];
       header.appendChild(myH1);
 
       const myPara = document.createElement('p');
-      myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+      myPara.textContent = 'Hometown: ' + obj['homeTown'] + ' // Formed: ' + obj['formed'];
       header.appendChild(myPara);
     }
 
-    function showHeroes(jsonObj) {
-      const heroes = jsonObj['members'];
+    function showHeroes(obj) {
+      const heroes = obj['members'];
 
       for(let i = 0; i < heroes.length; i++) {
         const myArticle = document.createElement('article');
